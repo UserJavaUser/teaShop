@@ -52,7 +52,7 @@ public class SQLOrderDAO implements OrderDAO{
 			throw new DAOException(e);
 		}
 		finally{
-			cPool.closeConnection(con, ps);
+			cPool.closeConnection(con, ps, rs);
 		}
 		
 	}
