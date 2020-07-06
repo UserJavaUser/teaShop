@@ -96,7 +96,7 @@ public class SQLCartItemDAO implements CartItemDAO{
 			throw new DAOException(e);
 		}
 		finally{
-			cPool.closeConnection(con, ps);
+			cPool.closeConnection(con, ps, rs);
 		}
 		return cartItems;
 	}
@@ -128,7 +128,7 @@ public class SQLCartItemDAO implements CartItemDAO{
 			throw new DAOException(e);
 		}
 		finally{
-			cPool.closeConnection(con, ps);
+			cPool.closeConnection(con, ps, rs);
 		}
 		return cartItem;
 	}
