@@ -1,6 +1,11 @@
 package by.htp.ishop.bean;
 
-public class CartItem {
+import java.io.Serializable;
+
+public class CartItem implements Serializable{
+
+	private static final long serialVersionUID = -6913853311803064723L;
+
 	private int id;
 	private int itemId;
 	private int quantity;
