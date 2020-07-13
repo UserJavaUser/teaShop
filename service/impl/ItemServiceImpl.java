@@ -19,7 +19,7 @@ public class ItemServiceImpl implements ItemService{
 		List<ItemView> items;
 		try {
 			items = itemDAO.getAllItems();
-		} catch (Exception e) {
+		} catch (DAOException e) {
 			throw new ServiceException(e);
 		}
 		return items;
@@ -38,7 +38,7 @@ public class ItemServiceImpl implements ItemService{
 		Item item;
 		try {
 			item = itemDAO.getItemById(itemId);
-		} catch (Exception e) {
+		} catch (DAOException e) {
 			throw new ServiceException(e);
 		}
 		return item;
