@@ -8,7 +8,7 @@ import java.security.spec.KeySpec;
 import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.PBEKeySpec;
 
-public class EncodingUtils {
+public class EncodingUtil {
 	
 	public static byte[] getSalt() {
 		SecureRandom random = new SecureRandom();
