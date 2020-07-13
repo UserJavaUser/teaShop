@@ -1,7 +1,11 @@
 package by.htp.ishop.bean;
 
-public class ItemView extends Item{
-	
+import java.io.Serializable;
+
+public class ItemView extends Item implements Serializable{
+
+	private static final long serialVersionUID = 117775732822668783L;
+
 	private String categoryName;
 
 	public ItemView() {
