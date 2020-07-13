@@ -1,8 +1,11 @@
 package by.htp.ishop.bean;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Order {
+public class Order implements Serializable{
+
+	private static final long serialVersionUID = 5020637159814538246L;
 	private int id;
 	private int sum;
 	private Date date;
