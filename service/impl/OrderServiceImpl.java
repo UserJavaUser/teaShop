@@ -17,7 +17,7 @@ public class OrderServiceImpl implements OrderService{
 		OrderDAO orderDAO = daoFactory.getOrderDAO();
 		try {
 			orderDAO.addNewOrder(cart, sum, items);
-		} catch (Exception e) {
+		} catch (DAOException e) {
 			throw new ServiceException(e);
 		}	
 	}
