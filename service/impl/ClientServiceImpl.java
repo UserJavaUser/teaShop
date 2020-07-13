@@ -23,7 +23,7 @@ public class ClientServiceImpl implements ClientService{
 				return false;
 			}
 			byte[] salt = authData.getSalt();
-			byte[] hashedPassword = EncodingUtils.getHash(password, salt);
+			byte[] hashedPassword = EncodingUtil.getHash(password, salt);
 			if(authData.getHash().length != hashedPassword.length) {
 				return false;
 			}
@@ -46,8 +46,8 @@ public class ClientServiceImpl implements ClientService{
 		UserDAO userDAO = daoObjectFactory.getUserDAO();
 		try {
 			User user = new User(firstName, lastName, email);
-			byte[]salt = EncodingUtils.getSalt();
-			byte[]hash = EncodingUtils.getHash(password, salt);
+			byte[]salt = EncodingUtil.getSalt();
+			byte[]hash = EncodingUtil.getHash(password, salt);
 			AuthData authData = new AuthData(login, salt, hash);
 			userDAO.registration(user, authData);
 		} catch (DAOException e) {
