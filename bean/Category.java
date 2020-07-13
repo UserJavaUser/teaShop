@@ -1,7 +1,10 @@
 package by.htp.ishop.bean;
 
-public class Category {
+import java.io.Serializable;
 
+public class Category implements Serializable{
+
+	private static final long serialVersionUID = 6681573803188368485L;
 	private int id;
 	private String name;
 
