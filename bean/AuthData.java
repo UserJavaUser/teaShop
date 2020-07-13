@@ -1,8 +1,12 @@
 package by.htp.ishop.bean;
 
+import java.io.Serializable;
 import java.util.Arrays;
 
-public class AuthData {
+public class AuthData implements Serializable{
+
+	private static final long serialVersionUID = 3264691864608784307L;
+
 	private String login;
 	private byte[] salt;
 	private byte[] hash;
