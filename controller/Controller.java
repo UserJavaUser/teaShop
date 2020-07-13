@@ -30,7 +30,7 @@ public class Controller extends HttpServlet {
 		try {ConnectionPool cPool = ConnectionPool.getInstance();
 			cPool.initPoolData();
 		} catch (ConnectionPoolException e) {
-			log.error("Exception while ConnectionPool is initialized");
+			log.error("Exception while ConnectionPool is initialized", e);
 		}
     }
 
@@ -47,7 +47,7 @@ public class Controller extends HttpServlet {
 			log.debug(commandName);
 			executionCommand.execute(req, resp);
 		} catch (CommandException e) {
-			log.error(e.getMessage());
+			log.error(e.getMessage(), e);
 			req.getRequestDispatcher(ERROR_PAGE).forward(req, resp);
 		}
     }
