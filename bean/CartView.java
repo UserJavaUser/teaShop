@@ -1,7 +1,13 @@
 package by.htp.ishop.bean;
 
-public class CartView extends Cart{
+import java.io.Serializable;
+
+public class CartView extends Cart implements Serializable{
+
+	private static final long serialVersionUID = 5414521196917765991L;
+
 	double sum;
+
 
 	public CartView() {
 		
