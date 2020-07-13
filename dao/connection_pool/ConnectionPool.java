@@ -100,19 +100,19 @@ public class ConnectionPool {
 		try {
 			rs.close();
 		}catch(SQLException e) {
-			log.error("Error while closing ResultSet");
+			log.error("Error while closing ResultSet", e);
 		}
 		try {
 			st.close();
 		}catch(SQLException e) {
 			//logger
-			log.error("Error while closing Statement");
+			log.error("Error while closing Statement", e);
 		}
 		try {
 			con.close();
 		}catch(SQLException e) {
 			//logger
-			log.error("Error while closing Connection");
+			log.error("Error while closing Connection", e);
 		}
 	}
 
@@ -121,13 +121,13 @@ public class ConnectionPool {
 			st.close();
 		}catch(SQLException e) {
 			//logger
-			log.error("Error while closing Statement");
+			log.error("Error while closing Statement", e);
 		}
 		try {
 			con.close();
 		}catch(SQLException e) {
 			//logger
-			log.error("Error while closing Connection");
+			log.error("Error while closing Connection", e);
 		}
 	}
 	
